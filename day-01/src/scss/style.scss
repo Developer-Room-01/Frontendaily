@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
+@import "normalize";
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #EBEEF2;
+    padding: 40px;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 920px;
+  margin: 0 auto;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+
+    h3 {
+      font-size: 42px;
+      font-weight: 900;
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #D4D9E0;
+      border-radius: 25px;
+      width: 212px;
+      height: 50px;
+      user-select: none;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        width: 100px;
+        height: 40px;
+        border-radius: 25px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: -1;
+        box-shadow: 0 15px 13px -12px rgba(#8693A4, .74);
+        transition: 300ms left ease-in-out;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: bold;
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #171922;
+        opacity: .7;
+        transition: 400ms opacity ease-in-out;
+
+        &:first-child {
+          opacity: 1;
+        }
+      }
+
+    }
+
+  }
+
+  .packages {
+    display: flex;
+    margin: 0 -20px;
+
+    .package {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #FFFFFF;
+      color: #171922;
+      font-weight: bold;
+      margin: 0 20px;
+      padding: 45px;
+
+      h5 {
+        font-size: 28px;
+        margin-bottom: 33px;
+      }
+
+      .price-info {
+        display: flex;
+        flex-direction: column;
+
+        h6 {
+          font-size: 22px;
+          margin-bottom: 8px;
+        }
+
+        span {
+          font-size: 18px;
+          color: #171922;
+          opacity: 0.7;
+          margin-bottom: 29px;
+        }
+
+      }
+
+      .pack-info {
+
+        p {
+          font-size: 16px;
+          line-height: 25px;
+          margin-bottom: 64px;
+        }
+      }
+
+      .package-btn {
+        margin-top: auto;
+        display: flex;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #171922;
+        color: black;
+        height: 60px;
+        width: 100%;
+        border-radius: 5px;
+        transition: 300ms all;
+
+        &:hover {
+          background-color: #171922;
+          border-radius: none;
+          color: white;
+
+        }
+
+      }
+
+    }
+  }
+
+  #price-switch {
+    display: none;
+    &:checked {
+      & + .title {
+        label {
+          &::before {
+            left: 105px;
+          }
+          span {
+            &:first-child {
+              opacity: .7;
+            }
+            &:last-child {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
