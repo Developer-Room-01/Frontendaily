@@ -1,0 +1,162 @@
+.reviews {
+    padding: 50px 65px;
+    background-color: $reviews-bg;
+    border-radius: 10px;
+    flex-basis: 578px;
+    max-width: 578px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .title {
+        color: $light;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .search-tags {
+        display: flex;
+        flex-direction: column;
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+
+            input {
+                width: 100%;
+                background-color: $search-input-bg;
+                color: $grey;
+                border: 1px solid $search-input-border;
+                border-radius: 5px;
+                padding: 23px 28px 23px 65px;
+                font-size: 18px;
+            }
+
+            i {
+                position: absolute;
+                top: 23px;
+                left: 28px;
+                z-index: 1;
+                width: 22px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+            }
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 117px;
+
+            a {
+                padding: 15px 25px;
+                font-size: 14px;
+                border-radius: 3px;
+                color: $grey;
+                background-color: $dark;
+                margin: 5px;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $light;
+                    transition: 400ms all;
+                }
+            }
+        }
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 37px;
+        background-color: $card-bg;
+        color: $light;
+        border-radius: 5px;
+        
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 27px;
+
+            .user-info {
+                display: flex;
+                align-items: center;
+
+                .user-photo {
+                    width: 48px;
+                    height: 48px;
+                    background-color: $danger;
+                    color: $light;
+                    border-radius: 50%;
+                    @include centerFlex;
+                    margin-right: 10px;
+
+                }
+
+                .username {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $light;
+                }
+            }
+
+            .point {
+                color: $warning;
+                font-size: 16px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+
+            .discription {
+                font-size: 18px;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .date {
+                font-size: 18px;
+                font-weight: 500;
+                color: $grey;
+            }
+
+            .btn-share {
+                padding: 8px 15px 8px 15px;
+                background-color: $btn-bg;
+                color: $btn-color;
+                border: 1px solid $btn-hover-bg;
+                border-radius: 3px;
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
